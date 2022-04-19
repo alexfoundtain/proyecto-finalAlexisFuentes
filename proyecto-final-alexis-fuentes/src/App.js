@@ -1,9 +1,15 @@
 import logo from './logo.svg';
 import './App.css';
 
+import NavBar from './components/NavBar/NavBar';
+
 function App() {
+  function handleCclickeando(numero){
+    console.log("click!"+numero);
+  }
   return (
     <div className="App">
+      <NavBar/>
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
@@ -17,6 +23,7 @@ function App() {
         >
           Learn React
         </a>
+        <button onClick={()=>handleCclickeando(4)}> Click me!</button>
       </header>
     </div>
   );
