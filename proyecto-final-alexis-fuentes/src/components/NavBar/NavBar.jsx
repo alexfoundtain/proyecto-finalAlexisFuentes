@@ -1,6 +1,8 @@
 import React from 'react';
 
 import './NavBar.css'
+import CarWidget from '../CarWidget/CarWidget';
+
 
 function NavBar({children}) {
     return (
@@ -12,16 +14,10 @@ function NavBar({children}) {
             <li><a href="#">About</a></li>
             <li><a href="#">Services</a></li>
             <li><a href="#">Get in Touch</a></li>
-            <li><a href='#'>{children}</a></li>
+            <li><a href='#'><CarWidget/></a></li>
             </ul>
-            
         </div>
       </div>
-    );
-}
-export function CarWidget(){
-    return (
-        <img className='carWidget' alt="this is an image" src="https://cdn-icons-png.flaticon.com/512/2271/2271049.png"></img>
     );
 }
 

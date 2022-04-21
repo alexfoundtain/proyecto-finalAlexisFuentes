@@ -1,19 +1,19 @@
 import logo from './logo.svg';
 import './App.css';
 
-import NavBar, {CarWidget} from './components/NavBar/NavBar';
-import Button from './components/Button';
-import Box from './components/Box';
-import ItemListContainer from './components/ItemListContainer';
+import NavBar from './components/NavBar/NavBar';
+// import Button from './components/Button';
+// import Box from './components/Box';
+import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 
 function App() {
-  function handleCclickeando(numero){
-    console.log("click!"+numero);
-  }
+  // function handleCclickeando(numero){
+  //   console.log("click!"+numero);
+  // }
   return (
     <div className="App">
-      <NavBar><CarWidget/></NavBar>
-      <ItemListContainer greeting='Welcome to the hood bro!'> </ItemListContainer>
+      <NavBar/>
+      <ItemListContainer greeting='Welcome to the hood bro!'/> 
       
       {/* <Button texto='Boton' color='red'/>
       <Button texto='Boton1' color='blue'/>
