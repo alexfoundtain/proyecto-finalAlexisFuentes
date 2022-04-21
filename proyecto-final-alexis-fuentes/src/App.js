@@ -1,7 +1,10 @@
 import logo from './logo.svg';
 import './App.css';
 
-import NavBar from './components/NavBar/NavBar';
+import NavBar, {CarWidget} from './components/NavBar/NavBar';
+import Button from './components/Button';
+import Box from './components/Box';
+import ItemListContainer from './components/ItemListContainer';
 
 function App() {
   function handleCclickeando(numero){
@@ -9,7 +12,15 @@ function App() {
   }
   return (
     <div className="App">
-      <NavBar/>
+      <NavBar><CarWidget/></NavBar>
+      <ItemListContainer greeting='Welcome to the hood bro!'> </ItemListContainer>
+      
+      {/* <Button texto='Boton' color='red'/>
+      <Button texto='Boton1' color='blue'/>
+      <Button texto='Boton2' color='orange'><p>Esto es un children del boton 2</p></Button>
+      <Button  color='brown'><p>Esto es un children</p></Button> */}
+      {/* <Box titulo='Titulo de caja'/>  */}
+
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
@@ -23,7 +34,7 @@ function App() {
         >
           Learn React
         </a>
-        <button onClick={()=>handleCclickeando(4)}> Click me!</button>
+        {/* <button onClick={()=>handleCclickeando(4)}> Click me!</button> */}
       </header>
     </div>
   );

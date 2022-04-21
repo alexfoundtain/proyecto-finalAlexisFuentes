@@ -31,3 +31,6 @@ li {
     flex-direction: row;
     align-items: center;
 }
+.carWidget{
+    height: 40px;
+}
