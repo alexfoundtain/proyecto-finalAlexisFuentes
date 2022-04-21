@@ -1,0 +1,12 @@
+.ItemListContainer{
+    height: 1000px;
+    background-color: azure;
+}
+.ItemListContainer h1{
+    color: darkblue;
+    font-style: oblique;
+}
+.ItemListContainer h1:hover{
+    color: rgb(77, 77, 211);
+    font-style: oblique;
+}
