@@ -13,6 +13,7 @@ export const ItemCount = ({stock, initial, onAdd}) => {
             setCount( count - 1);
         }
     }
+    // function OnAdd(){}
   return (
     <div className='item-count-container-grandfa'>
         <div className='item-count-container-fa'>
@@ -21,9 +22,8 @@ export const ItemCount = ({stock, initial, onAdd}) => {
                 <button onClick={() => handlePlusButton()}>+</button>
          </div>
          <div className='item-count-container-fa1'>   
-            <button onClick={() =>(count <=stock) && onAdd()}>Agregar al carrito </button>
+            <button onClick={() =>(count <=stock) && onAdd(count)}>Agregar al carrito </button>
         </div>
-
 
     </div>
   )
