@@ -1,0 +1,20 @@
+.item-count-container-grandfa{
+    background-color: white;
+    padding: 20px;
+    box-shadow: 5px black;
+    border:  black;
+}
+.item-count-container-grandfa{
+    height: 6vh;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+}
+
+.item-count-container-grandfar input{
+    height: 30px ;
+}
+.item-count-container-grandfa button{
+    height: 21.73px;
+}
