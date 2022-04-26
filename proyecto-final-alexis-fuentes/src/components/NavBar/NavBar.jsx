@@ -8,7 +8,7 @@ function NavBar({children}) {
     return (
     <div className="navigation-bar">
         <div id="navigation-container">
-            <img alt="this is an image" src="https://i.imgur.com/hCrQkJi.png"></img>
+            <img alt="this is an image" src="https://i.imgur.com/hCrQkJi.png"/>
             <ul>
             <li><a href="#">Home</a></li>
             <li><a href="#">About</a></li>
