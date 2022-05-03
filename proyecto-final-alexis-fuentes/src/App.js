@@ -1,10 +1,10 @@
-// import logo from './logo.svg';
 import './App.css';
 
 import NavBar from './components/NavBar/NavBar';
 // import Button from './components/Button';
 // import Box from './components/Box';
-import ItemListContainer from './components/ItemListContainer/ItemListContainer';
+//import ItemListContainer from './components/ItemListContainer/ItemListContainer';
+import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
 
 
 function App() {
@@ -15,7 +15,8 @@ function App() {
     <div className="App">
       <NavBar/>
       
-      <ItemListContainer greeting='Welcome to the hood bro!' /> 
+      {/* <ItemListContainer greeting='Welcome to the hood bro!' />  */}
+      <ItemDetailContainer/>
 
       
       {/* <Button texto='Boton' color='red'/>

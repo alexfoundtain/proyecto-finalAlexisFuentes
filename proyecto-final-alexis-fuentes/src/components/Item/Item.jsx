@@ -19,7 +19,5 @@ function Item({id, title, description, price, pictureUrl}){
             </div>
             )
 }
-    
-
 
 export default Item
