@@ -1,6 +1,7 @@
 import React ,{useState, useEffect} from 'react'
 import './ItemListContainer.css';
-import { getProducts } from '../../components/Item/asyncMock';
+// import { getProducts } from '../../components/Item/asyncMock';
+import { getProducts } from '../../model/asyncMock';
 import ItemList from '../../components/Item/ItemList';
 import { useParams } from 'react-router-dom';
 

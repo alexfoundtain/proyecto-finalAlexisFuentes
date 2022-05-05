@@ -11,7 +11,16 @@ export const getProducts = (categoryId) => {
     return new Promise (resolve => {
         setTimeout(()=>{
             resolve(CategoryItems)
-        },2000)
+        },500)
         
+    })
+}
+
+export const getProductbyId = (id) => {
+    const item = productsArray.filter(OneItem => OneItem.id === parseInt(id) );
+    return new Promise (resolve => {
+        setTimeout(()=>{
+            resolve(item[0])
+        },500)
     })
 }
