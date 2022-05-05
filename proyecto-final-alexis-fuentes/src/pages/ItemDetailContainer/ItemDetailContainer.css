@@ -1,0 +1,19 @@
+.ItemDetailContainer{
+    height: 1000px;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.ItemDetailContainer h1{
+    color: darkblue;
+    font-style: oblique;
+}
+.ItemDetailContainer h1:hover{
+    color: rgb(77, 77, 211);
+    font-style: oblique;
+}
+.CardsContainer{
+    display: flex;
+    justify-content: center;
+}
