@@ -8,7 +8,7 @@ function ItemDetail({id, title, description, price, pictureUrl}){
     }
         return (
             <>
-                <div className='img-container'>
+                <div className='containerDetail'>
                     <img src={pictureUrl} alt='No image found' />
                 </div>
                 <div className='content-description-detail'>

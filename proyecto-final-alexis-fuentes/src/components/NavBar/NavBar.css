@@ -17,10 +17,18 @@ ul {
     list-style-type: none;
 }
 
-a {
+.NavLinks {
     text-decoration: none;
     color: white;
     font-size: 16px;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    padding: 5px 15px;
+    opacity: 0.7;
+}
+.NavLinksActive{
+    text-decoration: none;
+    color: rgb(188, 187, 204);
+    font-size: 17px;
     font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
     padding: 5px 15px;
     opacity: 0.7;
