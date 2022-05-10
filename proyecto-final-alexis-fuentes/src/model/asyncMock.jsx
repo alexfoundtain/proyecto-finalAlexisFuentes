@@ -8,6 +8,7 @@ const  productsArray = [
 ];
 export const getProducts = (categoryId) => {
     const CategoryItems = categoryId ? productsArray.filter(OneCategory => OneCategory.category === categoryId ) : productsArray;
+    // const CategoryItems = categoryId ? productsArray.find(OneCategory => OneCategory.category === categoryId ) : productsArray;
     return new Promise (resolve => {
         setTimeout(()=>{
             resolve(CategoryItems)
