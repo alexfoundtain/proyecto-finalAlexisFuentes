@@ -1,10 +1,8 @@
 import React ,{useState, useEffect} from 'react'
-import './ItemDetailContainer.css';
-// import { getProductbyId } from '../../components/ItemDetail/asyncMock';
+import './ItemDetailContainer.css';;
 import { getProductbyId } from '../../model/asyncMock';
-import ItemDetails from '../../components/ItemDetail/ItemDetailList'; 
+import ItemDetail from '../../components/ItemDetail/ItemDetail'; 
 import { useParams } from 'react-router-dom';
-
 
 
 export const ItemDetailContainer = () => {
@@ -21,7 +19,8 @@ export const ItemDetailContainer = () => {
  return (
       <div className='ItemDetailContainer'>
         <div className='CardsContainer'>
-          <ItemDetails productsProp={productos}/>
+          {/* <ItemDetails productsProp={productos}/> */}
+          <ItemDetail key={productos.id} item={productos} /> 
         </div>
       </div>
   )    

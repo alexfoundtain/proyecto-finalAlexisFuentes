@@ -1,10 +1,8 @@
 import React ,{useState, useEffect} from 'react'
 import './ItemListContainer.css';
-// import { getProducts } from '../../components/Item/asyncMock';
 import { getProducts } from '../../model/asyncMock';
-import ItemList from '../../components/Item/ItemList';
+import Item from '../../components/Item/Item';
 import { useParams } from 'react-router-dom';
-
 
 
 export const ItemListContainer = () => {
@@ -15,10 +13,11 @@ export const ItemListContainer = () => {
       getProducts(categoryId)
       .then(products => setProductos(products))
     },[categoryId])
+
  return (
       <div className='ItemListContainer'>
         <div className='CardsContainer'>
-          <ItemList products={productos}/>
+          {productos.map(unProducto => <Item key={unProducto.id} itemProp={unProducto}  /> )}
         </div>
       </div>
   )
