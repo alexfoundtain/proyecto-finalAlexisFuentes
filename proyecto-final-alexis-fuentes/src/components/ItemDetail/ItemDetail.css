@@ -33,3 +33,16 @@
 .content-description-detail .description{
     text-align: left;
 }
+.count-container {
+    width: 80%;
+}
+
+.count-container a {
+    color: black;
+    text-decoration: none;
+    padding: 10px;
+}
+.count-container button{
+    width: 30%;
+    margin: 1%;
+}

@@ -1,3 +1,4 @@
+/* eslint-disable import/first */
 import React ,{useState, useEffect} from 'react'
 import './ItemDetailContainer.css';;
 import { getProductbyId } from '../../model/asyncMock';
@@ -19,7 +20,6 @@ export const ItemDetailContainer = () => {
  return (
       <div className='ItemDetailContainer'>
         <div className='CardsContainer'>
-          {/* <ItemDetails productsProp={productos}/> */}
           <ItemDetail key={productos.id} item={productos} /> 
         </div>
       </div>

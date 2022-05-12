@@ -1,15 +1,20 @@
-import React, { useState } from 'react';
+/* eslint-disable import/first */
+import React, { useContext, useState } from 'react';
 import './ItemDetail.css';
 import ItemCount from './../ItemCount/ItemCount';
 import { Link } from 'react-router-dom';
+import CartContext from '../../store/CartContext';
 
 function ItemDetail({item}){
 
     const [cantidadDeproductos, setCantidadDeproductos] = useState(null);
+    const cartCtx =useContext(CartContext);
     const addHandler = (quantityToAdd) => {
-        console.log("Se cargaron al carrito "+quantityToAdd+" articulos");   
-        setCantidadDeproductos(quantityToAdd);   
+        // cartCtx.addProduct(item);
+        // setCantidadDeproductos(quantityToAdd); 
+        cartCtx.addProduct({quantity: quantityToAdd, ...item});  
     }
+
     return (
         <>
             <div className='containerDetail'>
@@ -19,12 +24,21 @@ function ItemDetail({item}){
                 <h1>{item.title}</h1> 
                 <h3 className='description'> {item.description}</h3>
                 <div className=''>${item.price}</div>
-                {
-                    cantidadDeproductos ?
-                    <button><Link to={'/cart'}> Terminar la compra({cantidadDeproductos} items) </Link></button> :
-                    <ItemCount stock={item.stock} initial={1} onAdd={addHandler}  /> 
-                }
-
+                <ItemCount initial={0} stock={item.stock} onAdd={addHandler} />
+                <div className='count-container'>
+                        <button onClick={() => console.log(cartCtx.products)} >Print the cart content</button>
+                        <button onClick={() => cartCtx.removeProduct(item.id)} >Remove product</button>
+                        <button onClick={() => cartCtx.clear()} >Clear</button>
+                        <button onClick={() => console.log(cartCtx.isInCart(item.id))} >Is in cart</button>
+                        <button onClick={() => console.log(cartCtx.getCartQuantity())} >Quantity</button>
+                        {cartCtx.products.length &&
+                            <button onClick={() => console.log(cartCtx)}>
+                                <Link to='/cart'>
+                                    Terminar compra ({ cartCtx.getCartQuantity() } items)
+                                </Link>
+                            </button>
+                        }
+                </div>
             </div>
             
         </>
